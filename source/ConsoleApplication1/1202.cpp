@@ -1,44 +1,35 @@
 #include "pch.h"
 #include <iostream>
 
-int swap(int * a, int * b) {
-	int tmp;
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-
-	return *a, *b;
+int BoxVolume(int length, int width, int height) {
+	return length * width*height;
 }
 
-char swap(char *a, char *b) {
-	char tmp;
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-
-	return *a, *b;
+int BoxVolume(int width, int height) {
+	return width * height;
 }
 
-double swap(double *a, double *b) {
-	double tmp;
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+int BoxVolume(int height) {
+	return height;
+}
 
-	return *a, *b;
+int SimpleFunc(void) {
+	return 10;
+}
+
+int SimpleFunc(int a = 10) {
+	return a + 1;
 }
 
 int main(void) {
 	
-	int num1 = 20, num2 = 30;
-	swap(&num1, &num2);
-	std::cout << num1 << ' ' << num2 << std::endl;
+	std::cout << "[3, 3, 3] : " << BoxVolume(3, 3, 3) << std::endl;
+	std::cout << "[5, 5, D] : " << BoxVolume(5, 5) << std::endl;
+	std::cout << "[7, D, D] : " << BoxVolume(7) << std::endl;
+	//std::cout << "[D, D, D] : " << BoxVolume() << std::endl;
 
-	char ch1 = 'A', ch2 = 'Z';
-	swap(&ch1, &ch2);
-	std::cout << ch1 << ' ' << ch2 << std::endl;
+	//SimpleFunc(); // 에러남 위에 오버로드된 함수 두 개의 조건에 모두 충족하기때문에 모호해서.
 
-	double dbl1 = 1.111, dbl2 = 5.555;
-	swap(&dbl1, &dbl2);
-	std::cout << dbl1 << ' ' << dbl2 << std::endl;
+	return 0;
 }
+
