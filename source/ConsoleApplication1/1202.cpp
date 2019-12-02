@@ -1,10 +1,15 @@
-#include "1202.h"
+#include "pch.h"
 #include <iostream>
 
-void BestComImpl::SimpleFunc(void) {
-	std::cout << "BestCom이 정의한 함수 " << std::endl;
+inline int SQUARE(int x) {
+	return x * x;
 }
 
-void ProgComImpl::SimpleFunc(void) {
-	std::cout << "ProgCom이 정의한 함수" << std::endl;
+int main(void) {
+	
+	std::cout << SQUARE(5) << std::endl;
+	std::cout << SQUARE(12) << std::endl;
+
+	return 0;
 }
+
