@@ -1,9 +1,6 @@
-#include <iostream>
+namespace aa {
 
-namespace BestComImpl {
-	void SimpleFunc(void);
-}
+	void PlusInt(int &i);
 
-namespace ProgComImpl {
-	void SimpleFunc(void);
+	void SwitchInt(int &i);
 }
