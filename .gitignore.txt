@@ -1,6 +1,7 @@
-*.VC.opendb
 source/.vs/1/v15/Browse.VC.opendb
 OOP1/.vs/OOP1/v15/Browse.VC.opendb
 Oop1/.vs/Oop1/v15/Browse.VC.db
 source/.vs/1/v15/Browse.VC.db
 source/.vs/1/v15/ipch/AutoPCH/818e7ba12b3232a5/1202.ipch
+
+.gitignore
