@@ -1,41 +1,26 @@
-#include "1202.h"
 #include <iostream>
+#include <cstring>
 
 using namespace std;
-using namespace aa;
-
-typedef struct __Point {
-	int xpos;
-	int ypos;
-}Point;
-
-Point& PntAdder(const Point &p1, const Point &p2) {
-	
-	Point *ppt = new Point;
-
-	ppt->xpos = p1.xpos + p2.xpos;
-	ppt->ypos = p1.ypos + p2.ypos;
-	
-	return *ppt;
-}
 
 int main(void) {
 
-	Point *p1 = new Point;
-	p1->xpos = 1;
-	p1->ypos = 2;
+	char str1[] = "Hello";
+	char str2[] = " World";
+	char str3[20];
 
-	Point *p2 = new Point;
-	p2->xpos = 2;
-	p2->ypos = 1;
+	cout << strlen(str1) << " / " << strlen(str2) << endl;
 
-	Point &ref = PntAdder(*p1, *p2);
+	strcpy_s(str3, str1);
+	strcat_s(str3, str2);
+	
+	cout << str3 << endl;
 
-	cout << "(" << ref.xpos << "," << ref.ypos << ")" << endl;
-
-	delete p1;
-	delete p2;
-	delete &ref;
+	if (strcmp(str1, str2))
+	{
+		cout << "다르다" << endl;
+	}
+	else cout << "같다" << endl;
 
 	return 0;
 }
