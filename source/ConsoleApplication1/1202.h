@@ -1,17 +1,9 @@
-class Calculator {
+class Printer {
 
-private :
-	int numAdd;
-	int numMin;
-	int numMul;
-	int numDiv;
+private:
+	char str1[20];
 
 public :
-	void Init(); // ÃÊ±âÈ­
-	double Add(double a, double b); // µ¡¼À
-	double Min(double a, double b); // »¬¼À
-	double Mul(double a, double b); // °ö¼À
-	double Div(double a, double b); // ³ª´°¼À
-	void ShowOpCout(); // ¿¬»ê È½¼ö
-
+	void SetString(const char * str);
+	void ShowString(void);
 };
