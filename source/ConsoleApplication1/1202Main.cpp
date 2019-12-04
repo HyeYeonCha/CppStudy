@@ -12,6 +12,7 @@ void SwapPointer(int *ref1, int *ref2) {
 }
 
 void SwapPointer1(int *(&ref1), int *(&ref2)) {
+	cout << "swap" << endl;
 	int *temp = ref1;
 	ref1 = ref2;
 	ref2 = temp;
@@ -24,9 +25,12 @@ int main(void) {
 	int num2 = 10;
 	int *ptr2 = &num2;
 
+	cout << *ptr1 << endl;
+	cout << *ptr2 << endl;
+
 	SwapPointer1(ptr1, ptr2);
 	
-	cout << "num1 : " << num1 << " / num2 : " << num2 << endl;
+	cout << "num1 : " << *ptr1 << " / num2 : " << *ptr2 << endl;
 
 	return 0;
 }
