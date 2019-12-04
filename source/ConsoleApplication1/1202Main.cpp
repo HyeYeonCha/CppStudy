@@ -1,26 +1,23 @@
 #include <iostream>
 #include <cstring>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
+void Random(void) {
+	srand(time(NULL));
+
+	for (int i = 0; i < 5; i++)
+	{
+		cout << "Random Number " << i + 1 << " : " << rand() % 100 << endl;
+	}
+
+}
+
 int main(void) {
 
-	char str1[] = "Hello";
-	char str2[] = " World";
-	char str3[20];
-
-	cout << strlen(str1) << " / " << strlen(str2) << endl;
-
-	strcpy_s(str3, str1);
-	strcat_s(str3, str2);
+	Random();
 	
-	cout << str3 << endl;
-
-	if (strcmp(str1, str2))
-	{
-		cout << "다르다" << endl;
-	}
-	else cout << "같다" << endl;
-
 	return 0;
 }
