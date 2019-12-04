@@ -4,33 +4,26 @@
 using namespace std;
 using namespace aa;
 
-void SwapPointer(int *ref1, int *ref2) {
-
-	int temp = *ref1;
-	*ref1 = *ref2;
-	*ref2 = temp;
+int& RefRetFuncOne(int &ref) {
+	ref++;
+	return ref;
 }
 
-void SwapPointer1(int *(&ref1), int *(&ref2)) {
-	cout << "swap" << endl;
-	int *temp = ref1;
-	ref1 = ref2;
-	ref2 = temp;
+int RefRetFuncTwo(int &ref) {
+	ref++;
+	return ref;
 }
 
 int main(void) {
 
-	int num1 = 5;
-	int *ptr1 = &num1;
-	int num2 = 10;
-	int *ptr2 = &num2;
+	int num1 = 1;
+	int num2 = RefRetFuncTwo(num1);
 
-	cout << *ptr1 << endl;
-	cout << *ptr2 << endl;
+	num1++;
+	num2 += 100;
 
-	SwapPointer1(ptr1, ptr2);
-	
-	cout << "num1 : " << *ptr1 << " / num2 : " << *ptr2 << endl;
+	cout << "num1 : " << num1 << endl;
+	cout << "num2 : " << num2 << endl;
 
 	return 0;
 }
