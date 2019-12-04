@@ -4,26 +4,18 @@
 using namespace std;
 using namespace aa;
 
-int& RefRetFuncOne(int &ref) {
-	ref++;
-	return ref;
-}
-
-int RefRetFuncTwo(int &ref) {
-	ref++;
-	return ref;
-}
 
 int main(void) {
 
-	int num1 = 1;
-	int num2 = RefRetFuncTwo(num1);
+	const int num = 12;
+	const int* ptr = &num;
 
-	num1++;
-	num2 += 100;
+	const int &ref = *ptr;
+	//const int *(&ref) = ptr;
 
-	cout << "num1 : " << num1 << endl;
-	cout << "num2 : " << num2 << endl;
+	cout << *ptr << endl;
+	cout << *(&ref) << endl;
+	//cout << *ref << endl;
 
 	return 0;
 }
