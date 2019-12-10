@@ -1,17 +1,8 @@
 #include <iostream>
-#include "1202.h"
 
 using namespace std;
 
-int main(void) {
-
-	Printer pnt;
-
-	pnt.SetString("Hello world!");
-	pnt.ShowString();
-
-	pnt.SetString("I love C++");
-	pnt.ShowString();
-	
-	return 0;
-}
+//int main(void) {
+//	
+//	return 0;
+//}
