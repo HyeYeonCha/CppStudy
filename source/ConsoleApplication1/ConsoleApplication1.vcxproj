@@ -19,11 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FruitSale.cpp" />
-    <ClCompile Include="FruitSaleSim1.cpp" />
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="CircleMain.cpp" />
+    <ClCompile Include="Point0402.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FruitSale.h" />
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="Point0402.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
