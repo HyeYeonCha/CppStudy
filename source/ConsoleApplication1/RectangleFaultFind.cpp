@@ -4,6 +4,25 @@
 
 using namespace std;
 
+class EasyClass {
+private: int num;
+public : 
+	void InitNum(int n) {
+		num = n;
+	}
+	const int GetNum() {
+		return num;
+	}
+};
+
+class LiveClass {
+private: int num;
+public : 
+	void InitNum(const EasyClass &easy) {
+		num = easy.GetNum();
+	}
+};
+
 int main(void) {
 
 	Point pos1;
