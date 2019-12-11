@@ -6,6 +6,6 @@ void Point::Init(int x, int y) {
 	ypos = y;
 }
 
-void Point::ShowPointInfo() {
+void Point::ShowPointInfo() const {
 	cout << "[" << xpos << ", " << ypos << "]" << endl;
 }

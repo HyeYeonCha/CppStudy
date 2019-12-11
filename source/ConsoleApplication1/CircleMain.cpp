@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Point0402.h"
 #include "Circle.h"
 
 int main() {
