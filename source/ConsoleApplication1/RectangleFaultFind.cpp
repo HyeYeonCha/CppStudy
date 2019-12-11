@@ -4,13 +4,29 @@
 
 using namespace std;
 
+// const 키워드 예제 (const 키워드를 사용하는 함수 안에서 다른 호출할 때는 호출되는 함수도 const 키워드를 지닌 함수여야 한다. )
+
+class SimpleClass {
+private: int num;
+public : 
+	void InitNum(int n) {
+		num = n;
+	}
+	int GetNum() const {
+		return num;
+	}
+	void ShowNum() const {
+		cout << GetNum() << endl;
+	}
+};
+
 class EasyClass {
 private: int num;
 public : 
 	void InitNum(int n) {
 		num = n;
 	}
-	const int GetNum() {
+	int GetNum() const {
 		return num;
 	}
 };
